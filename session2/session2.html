@@ -1,0 +1,201 @@
+<!DOCTYPE html><html><head>
+      <title>session2</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\EricLin\.antigravity\extensions\shd101wyy.markdown-preview-enhanced-0.8.20-universal\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      <script type="text/javascript" src="file:///c:\Users\EricLin\.antigravity\extensions\shd101wyy.markdown-preview-enhanced-0.8.20-universal\crossnote\dependencies\mermaid\mermaid.min.js" charset="UTF-8"></script>
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="session-2rag-私有知識庫賦予-ai-設備領域知識">Session 2｜RAG 私有知識庫：賦予 AI 設備領域知識 </h1>
+<p>上一個單元，我們成功召喚了 LLM，但您可能會發現一個問題：「它根本不懂我們公司機台的專屬專有名詞設定！」</p>
+<p>這是因為 LLM 使用的是外面的通用資料庫訓練。為了解決這個問題，我們需要 <strong>RAG (Retrieval-Augmented Generation, 檢索增強生成)</strong>，讓我們把龐大的「設備操作手冊」與「歷史維修記錄」變成 AI 能隨時查詢的專屬資料庫。</p>
+<h2 id="1-rag-核心運作機制與架構">1. RAG 核心運作機制與架構 </h2>
+<p>簡單來說，RAG 就是<strong>讓 AI 在回答問題之前，先去翻閱我們的參考書（知識庫）</strong>。</p>
+<p>這分為三個核心步驟：</p>
+<ol>
+<li><strong>向量化（Embedding）</strong>：把文字語意轉換為電腦能理解的一串「數字向量」。</li>
+<li><strong>檢索（Retrieve）</strong>：當使用者問問題時，先把問題也轉成向量，去比對資料庫中最相似的資料。</li>
+<li><strong>生成（Generate）</strong>：把檢索到的資料段落，連同原本的問題，一起包裝丟給 LLM，得到精準的回答。</li>
+</ol>
+<h3 id="為什麼不用傳統-sql-關聯資料庫就好">為什麼不用傳統 SQL 關聯資料庫就好？ </h3>
+<p>我們熟悉的 <code>SELECT * FROM Logs WHERE ErrorMsg LIKE '%溫度%'</code> 是<strong>字面上的精確比對</strong>。但如果使用者問「機器很燙怎麼辦」，字面上沒有「溫度」這兩個字，SQL 就查不到。<br>
+<strong>向量資料庫（Vector Database）</strong> 能夠做到「語意搜尋」，也就是理解「很燙」與「溫度異常」在概念上是接近的。</p>
+<div class="mermaid">graph TD
+    subgraph Retrieval_Stage [檢索階段 - Retrieval]
+        A[使用者問: &lt;br/&gt;機台很燙怎麼辦?] --&gt; B[Embedding Model]
+        B --&gt; C([提問向量化])
+        C -- 向量相似度比對 --&gt; D[(向量資料庫 &lt;br/&gt;Vector DB)]
+        D -- 檢索出 Top-K 相關文件 --&gt; E[Context: &lt;br/&gt;降溫程序/水塔指南]
+    end
+
+    subgraph Generation_Stage [生成階段 - Generation]
+        E --&gt; F[Prompt Engineering:&lt;br/&gt;合併問題 + 參考文本]
+        F --&gt; G[生成式模型 LLM]
+        G --&gt; H{{"回答: &lt;br/&gt;建議先檢查冷卻水塔..."}}
+    end
+
+    %% 樣式美化
+    style D fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style G fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style H fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
+</div><hr>
+<h2 id="2-企業專屬知識處理實務-data-pipeline">2. 企業專屬知識處理實務 (Data Pipeline) </h2>
+<p>要在這套系統中放入我們的資料，首先要處理的是<strong>非結構化資料</strong>（例如：設備手冊 PDF，維修紀錄 Word）。這段資料處理的過程稱為 Data Pipeline。</p>
+<p>這裡頭最關鍵的是 <strong>文本切塊（Chunking）</strong> 策略：<br>
+我們不能把整本千頁說明書塞給 LLM（受限於每一次呼叫有輸入長度限制，稱為 Context Window）。我們必須把說明書切成一個一個小段落。</p>
+<ul>
+<li><strong>實作思維</strong>：在切塊時，我們必須注意不要破壞句子的完整性，或者特別將資料表與機台參數等內容，標註 Metadata 來協助後續過濾搜尋。</li>
+</ul>
+<h3 id="-實務建置的-5-個明確步驟">📌 實務建置的 5 個明確步驟 </h3>
+<p>要從零在內部建置一套 RAG 系統，通常會經歷以下流程：</p>
+<ol>
+<li><strong>資料準備 (Data Loading)</strong>
+<ul>
+<li><strong>實作內容</strong>：寫小程式將 PDF 操作手冊解開成純文字，或是從既有 ERP / MES 的 SQL Server 中倒出過去十年的文字維護紀錄。</li>
+</ul>
+</li>
+<li><strong>文本切塊 (Chunking)</strong>
+<ul>
+<li><strong>實作內容</strong>：將長篇文章依照標點符號或特定長度（例如每 500 個字元）切成多個段落。實務上會保留段落間的重疊 (Overlap) 約 50 個字，以免把一句話硬生生切斷造成語意斷裂。</li>
+</ul>
+</li>
+<li><strong>呼叫 Embedding 模型</strong>
+<ul>
+<li><strong>實作內容</strong>：透過 API（例如 OpenAI API 放寬權限，或是本地部署開源的 <code>text-embedding</code> 等模型），把上一步切好的數千個段落，通通轉換成「數字向量」。</li>
+</ul>
+</li>
+<li><strong>存入向量資料庫 (Store)</strong>
+<ul>
+<li><strong>實作內容</strong>：把「原始文字段落」加上「向量數字串」，一起寫入專門處理這類資料的資料庫（如 Qdrant, Milvus，或是熟悉 MS 體系的開發者也可以直接在 SQL Server 2022+ / PostgreSQL 透過外掛模組支援向量檢索）。</li>
+</ul>
+</li>
+<li><strong>實際檢索與生成 (Retrieve &amp; Generate)</strong>
+<ul>
+<li><strong>實作內容</strong>：當收到使用者詢問，系統先以相同的 Embedding 模型把「問題」向量化，向資料庫發出 Query。拿到前 3 筆最相關的文字後，用字串拼接塞進 LLM 的 Prompt 中，最後才輸出給使用者。</li>
+</ul>
+</li>
+</ol>
+<div class="mermaid">graph TD
+    subgraph Data_Pipeline [Data Pipeline 階段 建置期]
+        A[(企業 ERP / PDF&lt;br/&gt;非結構式資料)] --&gt;|1. Data Loading| B[提取純文字]
+        B --&gt;|2. Chunking| C[切塊成重疊的文本段落]
+        C --&gt;|3. Embedding API| D([轉換為數字向量])
+        D --&gt;|4. Store| E[(向量資料庫&lt;br/&gt;如 Qdrant / Milvus)]
+    end
+    
+    subgraph Application_Stage [實際應用階段 執行期]
+        F[使用者發出詢問] --&gt;|呼叫 Embedding| G([問題轉為向量])
+        G --&gt;|5. Retrieve 查詢庫| E
+        E -. 找出 Top 關聯段落 .-&gt; H[組合 Prompt 模板]
+        H --&gt;|5. Generate| I[傳給 LLM 生成回答]
+    end
+    
+    %% 樣式美化
+    style E fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style I fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+</div><hr>
+<h2 id="3-rag-進階優化與準確度提升">3. RAG 進階優化與準確度提升 </h2>
+<p>常常聽到 AI 會「發瘋」或是「一本正經地胡說八道」，這稱為<strong>幻覺（Hallucination）</strong>。<br>
+透過 RAG，我們能在 Prompt 中加上強制指令：「<strong>請嚴格根據以下參考資料回答，若資料中未提及，請回答不知道</strong>」，這是企業場景中避免 AI 亂給維修建議的最關鍵防線。</p>
+<h3 id="為什麼我們極度需要混合搜尋-hybrid-search">為什麼我們極度需要「混合搜尋 (Hybrid Search)」？ </h3>
+<p>純粹的<strong>向量語意搜尋</strong>很聰明，能懂「高溫」等同於「很燙」。但它有個致命弱點對製造業與 IT 很不友善：<strong>對特定料號或 Error Code 的敏銳度極差</strong>。</p>
+<p>👉 <em>情境舉例</em>：使用者詢問「<strong>E-404 錯誤代碼的解決方案</strong>」。</p>
+<ul>
+<li><strong>純向量搜尋的災難</strong>：Embedding 模型認為「E-404」和「E-405」在語意上長得很像（都是錯誤代碼），最後可能會把 E-405 的解決方案當作第一名丟給你，導致工程師換錯零件！</li>
+</ul>
+<p>為了確保準確率，目前企業級 RAG 實務上都會採用 <strong>混合搜尋（Hybrid Search）</strong>：<br>
+亦即同時執行「向量語意搜尋」與「傳統關鍵字 (如 BM25 演算法) 搜尋」，然後把兩邊找出來的結果進行<strong>重新排名與算分 (Re-ranking)</strong>，兼顧了語意理解與精確吻合。</p>
+<div class="mermaid">graph TD
+    A[使用者詢問: &lt;br/&gt;E-404 高溫報警怎麼辦？] --&gt; B{混合搜尋引擎}
+    
+    B --&gt;|1. 語意比對| C[找概念相近的: &lt;br/&gt;過熱、溫度異常]
+    B --&gt;|2. 關鍵字比對| D[找字面精確吻合的: &lt;br/&gt;E-404 字串]
+    
+    C --&gt; E((Re-rank&lt;br/&gt;重新排名的機制))
+    D --&gt; E
+    
+    E --&gt; F[產出最精準的 Top 3 文本]
+    F --&gt; G[丟給 LLM 進行最終回答]
+    
+    style B fill:#b3e5fc,stroke:#0277bd,stroke-width:2px
+    style E fill:#ffe082,stroke:#ff8f00,stroke-width:2px
+</div><hr>
+<h2 id="recap--exercise">Recap &amp; Exercise </h2>
+<h3 id="-recap-總結">📝 Recap 總結 </h3>
+<ol>
+<li>RAG 架構透過 Embedding 技術賦予 AI 語意搜尋的能力。</li>
+<li>向量資料庫（Vector DB）處理的是「語意近似度」，有別於傳統關聯式資料庫的精確查詢。</li>
+<li>正確的 Chunking（文本切塊）以及搭配混合搜尋，能大幅減少 AI 的幻覺並提高精準度。</li>
+</ol>
+<h3 id="️️-exercise-演練">🏋️‍♂️ Exercise 演練 </h3>
+<ol>
+<li>請觀看 <code>examples/SimpleVectorSearch.cs</code> 程式碼。</li>
+<li>試著理解程式碼中如何呼叫模型將「查詢字串」與「資料庫字串」轉換為向量數字並計算距離。</li>
+<li>（紙上練習）畫出一套針對貴單位「維修工單紀錄」的 RAG 資料處理與檢索流程圖草案。</li>
+</ol>
+
+      </div>
+      
+      
+    
+    
+    <script type="module">
+// TODO: If ZenUML gets integrated into mermaid in the future,
+//      we can remove the following lines.
+
+
+var MERMAID_CONFIG = ({"startOnLoad":false});
+if (typeof MERMAID_CONFIG !== 'undefined') {
+  MERMAID_CONFIG.startOnLoad = false
+  MERMAID_CONFIG.cloneCssStyles = false
+  MERMAID_CONFIG.theme = "default"
+}
+
+mermaid.initialize(MERMAID_CONFIG || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidetransitionend', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+  await mermaid.run({
+    nodes: document.querySelectorAll('.mermaid')
+  })
+} else {
+  await mermaid.run({
+    nodes: document.querySelectorAll('.mermaid')
+  })
+}
+</script>
+    
+    
+    
+  
+    </body></html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html><html><head>
+      <title>session3</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\EricLin\.antigravity\extensions\shd101wyy.markdown-preview-enhanced-0.8.20-universal\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      <script type="text/javascript" src="file:///c:\Users\EricLin\.antigravity\extensions\shd101wyy.markdown-preview-enhanced-0.8.20-universal\crossnote\dependencies\mermaid\mermaid.min.js" charset="UTF-8"></script>
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="session-3ai-agent-實戰打造製程自動化助手">Session 3｜AI Agent 實戰：打造製程自動化助手 </h1>
+<p>經過前面單元，我們讓 AI 聽懂問題，也給了它大本的參考書 (RAG)。不過現在它還是像個只會「被動回答」的機器人。<br>
+這個單元的目標，是讓 AI 長出手腳，進化為 <strong>AI Agent (代理人/智能體)</strong>。它不只能文字對答，甚至會針對你的問題<strong>主動去調用企業內部的其他工具或呼叫資料庫</strong>！</p>
+<h2 id="1-從-llm-到-ai-agent-的思維躍進">1. 從 LLM 到 AI Agent 的思維躍進 </h2>
+<p>什麼是 Agent？<br>
+傳統的 LLM 依賴 <strong>提示詞驅動 (Prompt-driven)</strong>，你輸入什麼，它就回答什麼。<br>
+但 Agent 具備 <strong>工具調用 (Function Calling / Tool Use)</strong> 的能力。</p>
+<p>當你詢問 Agent：「機台 E-03 上個月維修幾次？」</p>
+<ol>
+<li>Agent 認知到自己手邊沒有這些即時資料。</li>
+<li>Agent 決定使用你預先為它準備好的「資料庫查詢工具」。</li>
+<li>Agent 主動生成一個查資料庫的指令給系統。</li>
+<li>系統查完後把結果丟回給 Agent。</li>
+<li>Agent 綜合整理後回報給使用者。</li>
+</ol>
+<div class="mermaid">sequenceDiagram
+    participant User as 使用者
+    participant Agent as AI Agent (LLM)
+    participant Tool as 企業工具 (如 Query ERP API)
+    
+    User-&gt;&gt;Agent: E-03機台昨天有保養嗎？
+    Note over Agent: 分析意圖，意識到需要查資料
+    Agent-&gt;&gt;Tool: 呼叫 (Action): CheckMaintenanceHistory("E-03", "yesterday")
+    Tool--&gt;&gt;Agent: 查詢結果: 無保養紀錄
+    Note over Agent: 將工具回傳結果彙整
+    Agent--&gt;&gt;User: 報告，根據資料庫顯示，昨天 E-03 尚未進行保養作業。
+</div><hr>
+<h2 id="2-langchain--mcp-架構與企業工具整合">2. LangChain / MCP 架構與企業工具整合 </h2>
+<h3 id="為什麼我們需要-langchain-等框架">為什麼我們需要 LangChain 等框架？ </h3>
+<p>一般來說，如果您要自己寫這套「Agent 調用工具」的程式，會遇到很多麻煩的底層操作：</p>
+<ul>
+<li>您要把公司所有的 API 寫成一長串的 JSON 敘述來跟 AI 說「我有這些工具可以用喔」。</li>
+<li>您要常常解析 AI 回傳的「決定調用某工具」的 JSON 格式字串。</li>
+<li>您要捕捉執行結果並把它再次黏合進歷史對話紀錄。</li>
+</ul>
+<p><strong>LangChain</strong> (以及 C# 開發者常用的 <strong>Microsoft.SemanticKernel</strong>) 這個框架的誕生，就是幫您把這些髒活 (Plumbing) 都做好了。它提供了一套標準化的「鏈 (Chain)」概念。</p>
+<h3 id="原理與運作架構將-ai-與工具鏈在一起">原理與運作架構：將 AI 與工具「鏈」在一起 </h3>
+<p>簡單來說，在 LangChain 或 Semantic Kernel 中，我們不用從頭組裝 API Call，我們只要將模型與工具宣告出來即可。</p>
+<div class="mermaid">graph LR
+    A[User Request] --&gt; B[Agent 引擎&lt;br/&gt;LangChain / SK]
+    
+    subgraph Tools [註冊在框架內的企業工具庫]
+        T1[查 Database 模組]
+        T2[發送 Teams 訊息模組]
+        T3[控制機台 API 模組]
+    end
+    
+    B &lt;--&gt;|1. AI 思考決定調用工具| Tools
+    B &lt;--&gt;|2. 獲取結果後再思考| Tools
+    
+    B --&gt; C[最終回答]
+</div><h3 id="-實作概念範例-以框架思維出發">👉 <em>實作概念範例 (以框架思維出發)</em> </h3>
+<p>假設您寫了一個檢查機台參數的 C# Function <code>CheckSensor(string machine_id)</code>。</p>
+<p>透過框架，您只需要在這個函數上面加一個<strong>裝飾器 (Attribute/Annotation)</strong>，然後賦予它一段「人類語言的描述」，AI 就能看懂。</p>
+<p><strong>框架實作的感覺像這樣 (虛擬語法)：</strong></p>
+<pre data-role="codeBlock" data-info="csharp" class="language-csharp csharp"><code><span class="token comment">// 我們只要寫好工具與文字描述，框架會自動把這段翻譯給 AI 聽</span>
+<span class="token punctuation">[</span><span class="token function">Description</span><span class="token punctuation">(</span><span class="token string">"用來查詢指定機台的即時感測器溫度"</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-string">string</span></span> <span class="token function">CheckSensor</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-string">string</span></span> machineId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 您自己寫的內部資料庫或感測器讀取邏輯</span>
+    <span class="token class-name"><span class="token keyword keyword-var">var</span></span> temp <span class="token operator">=</span> DB<span class="token punctuation">.</span><span class="token function">GetTemp</span><span class="token punctuation">(</span>machineId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-return">return</span> <span class="token interpolation-string"><span class="token string">$"目前溫度 </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">temp</span><span class="token punctuation">}</span></span><span class="token string"> 度"</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>然後，當您跟 Agent 說：「幫我看一下 E-01 熱不熱？」<br>
+Agent 背後的 LangChain/SK 引擎會自動對比它所擁有的工具，發現 <code>CheckSensor</code> 的文字描述完全吻合這項需求，接著就自動觸發該函式，最後回報：「經過查詢，機台 E-01 目前溫度為 85 度，確實稍微偏熱喔！」</p>
+<h3 id="什麼是-model-context-protocol-mcp">什麼是 Model Context Protocol (MCP)？ </h3>
+<p>近期除了 LangChain 這種能在「自己的程式碼內」整合工具的框架外，我們還迎來了一個全新的系統級架構協定：<strong>Model Context Protocol (MCP)</strong>。<br>
+如果您覺得 LangChain 是幫您處理好底層語法的函式庫，那麼 MCP 的理想就是直接打造一套**「USB 隨插即用」**的通用接頭。</p>
+<p>以前，每當企業的 ERP 系統要給雲端的 OpenAI 用，就要寫一套 API 格式；未來要換給地端的 Llama 3 用，可能又要改寫另一套格式。MCP 就是為了解決這個對接痛點而生的標準協定。</p>
+<h4 id="mcp-運作架構圖usb式的隨插即用">MCP 運作架構圖：「USB」式的隨插即用 </h4>
+<div class="mermaid">graph TD
+    subgraph AI_Clients [各式各樣的 AI 用戶端]
+        A[Claude Desktop / AI IDE]
+        B[企業自建的 C# Web 聊天介面]
+        C[開源的 AI 伺服器]
+    end
+    
+    subgraph MCP_Connection [標準化傳輸標準]
+        D((MCP 協定&lt;br/&gt;猶如 USB 轉接埠))
+    end
+    
+    subgraph Enterprise_Data [企業自建的 MCP Servers]
+        E[ERP MCP Server&lt;br/&gt;可查工單狀態]
+        F[SQL MCP Server&lt;br/&gt;可查設備感測器]
+    end
+    
+    A &amp; B &amp; C &lt;--&gt; D
+    D &lt;--&gt; E &amp; F
+    
+    style D fill:#eceff1,stroke:#607d8b,stroke-width:3px
+</div><h3 id="-實作情境與優勢">👉 <em>實作情境與優勢</em> </h3>
+<p>假設您的 IT 部門已經開發了一支標準的 <strong>ERP MCP Server</strong> 在公司內部運作。<br>
+某天，設備工程師在他的電腦上裝了最新版、支援 MCP 的 AI 桌面軟體（例如 Claude Desktop），他只需要在軟體的設定檔中加入一行：</p>
+<pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token property">"mcpServers"</span><span class="token operator">:</span> <span class="token punctuation">{</span> 
+  <span class="token property">"CompanyERP"</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"http://internal-mcp-server/erp"</span> <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
+</code></pre><p>這個設定一儲存，AI 就會透過「MCP 協定 (這條虛擬 USB 線)」瞬間「看懂」ERP 裡有哪些工具可以呼叫。<br>
+工程師可以直接問 AI：「幫我查一下剛剛報錯的 E-03 機台，上次是誰修的？」<br>
+AI 便會自動透過 MCP 去您的 ERP 系統查詢並回報！<br>
+<strong>IT 開發人員完全不需要為了這款新發明的 AI 軟體，去修改後端程式碼。</strong></p>
+<hr>
+<h2 id="3-ai-製程工程師的整合方案探討">3. AI 製程工程師的整合方案探討 </h2>
+<p>將 Session 1 到 3 綜合起來：</p>
+<ol>
+<li><strong>Local LLM (Session 1)</strong> 處理機密推論。</li>
+<li><strong>RAG (Session 2)</strong> 提供詳細的機台技術手冊。</li>
+<li><strong>Agent (Session 3)</strong> 自動觸發報表抓取並傳送分析。</li>
+</ol>
+<p>這時身為 IT 工程師，我們最重要的工作就變成了把關 <strong>資安邊界</strong>：</p>
+<ul>
+<li><strong>存取權限 (Read)</strong>：AI API 可以調用哪些資料庫 Schema？</li>
+<li><strong>執行權限 (Write/Execute)</strong>：如果我們寫了一個「遠端重啟機台」的工具給 Agent，讓不可控的 LLM 自行決定重啟，會是非常危險的事。因此對於變更狀態的工具，必須保留 <strong>Human-in-the-loop (人類審核環節)</strong>。</li>
+</ul>
+<hr>
+<h2 id="recap--exercise">Recap &amp; Exercise </h2>
+<h3 id="-recap-總結">📝 Recap 總結 </h3>
+<ol>
+<li>AI Agent 的核心能力在於 Function Calling，它能主動判斷並呼叫我們開放給它的企業工具 API。</li>
+<li>結合工具能極大化自動化流程，但也必須嚴格劃分權限，確保高風險操作保留人工審核機制。</li>
+</ol>
+<h3 id="️️-exercise-演練">🏋️‍♂️ Exercise 演練 </h3>
+<ol>
+<li>查看 <code>examples/ToolCallingAgent.cs</code> 程式碼中的偽代碼範例。</li>
+<li>了解在 C# 程式碼中如何「聲明」一個工具讓 AI 得知該工具的存在與輸入參數。</li>
+<li>（實作發想）針對您單位的痛點，若要實作一個 Agent，您會為它開發哪三個「工具 / Function」？提出一個整合草案。</li>
+</ol>
+
+      </div>
+      
+      
+    
+    
+    <script type="module">
+// TODO: If ZenUML gets integrated into mermaid in the future,
+//      we can remove the following lines.
+
+
+var MERMAID_CONFIG = ({"startOnLoad":false});
+if (typeof MERMAID_CONFIG !== 'undefined') {
+  MERMAID_CONFIG.startOnLoad = false
+  MERMAID_CONFIG.cloneCssStyles = false
+  MERMAID_CONFIG.theme = "default"
+}
+
+mermaid.initialize(MERMAID_CONFIG || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidetransitionend', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+  await mermaid.run({
+    nodes: document.querySelectorAll('.mermaid')
+  })
+} else {
+  await mermaid.run({
+    nodes: document.querySelectorAll('.mermaid')
+  })
+}
+</script>
+    
+    
+    
+  
+    </body></html>

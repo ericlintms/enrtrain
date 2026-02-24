@@ -1,0 +1,171 @@
+<!DOCTYPE html><html><head>
+      <title>session1</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\EricLin\.antigravity\extensions\shd101wyy.markdown-preview-enhanced-0.8.20-universal\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      <script type="text/javascript" src="file:///c:\Users\EricLin\.antigravity\extensions\shd101wyy.markdown-preview-enhanced-0.8.20-universal\crossnote\dependencies\mermaid\mermaid.min.js" charset="UTF-8"></script>
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="session-1地端-llm-部署與企業系統-api-整合">Session 1｜地端 LLM 部署與企業系統 API 整合 </h1>
+<p>歡迎來到第一個 Session！這個單元的目標，是讓我們具備在工廠或企業內部安全部署開源 AI 模型的能力，並且將其包裝成熟悉且容易呼叫的 Web API，讓既有的 ERP、MES 或是機台系統能夠輕鬆介接。</p>
+<h2 id="1-llm-基礎觀念與邊緣運算優勢">1. LLM 基礎觀念與邊緣運算優勢 </h2>
+<p>作為 IT 開發人員，您可能會問：「為什麼我們不直接呼叫 OpenAI (ChatGPT) 就好？」</p>
+<p>在部分企業場景中，商業 API 確實方便，但當我們面對：</p>
+<ul>
+<li><strong>機密保護</strong>：設備參數、工單資料或客戶機密絕不能離開公司內部網路。</li>
+<li><strong>斷網可用性</strong>：工廠機台在封閉網路中，不一定有穩定對外連線。</li>
+</ul>
+<p>這時，我們就需要 <strong>Local LLM（地端大型語言模型）</strong>，將 AI 運算帶到離資料與機台最近的地方（邊緣運算 Edge Computing）。</p>
+<h3 id="系統架構雲端-vs-地端-llm">系統架構：雲端 vs. 地端 LLM </h3>
+<div class="mermaid">graph LR
+    subgraph 雲端 API 方案
+        A1[企業內部系統 ERP/MES] -- Internet&lt;br/&gt;有資安風險 --&gt; B1[Cloud Server&lt;br/&gt;e.g. OpenAI]
+    end
+
+    subgraph 地端 LLM 方案
+        A2[企業內部系統 ERP/MES] -- Intranet&lt;br/&gt;內部網段安全 --&gt; B2[Local Server&lt;br/&gt;e.g. 本地 GPU 伺服器]
+    end
+</div><h3 id="硬體評估要多少資源才能跑">硬體評估：要多少資源才能跑？ </h3>
+<p>要在工廠端運行模型，我們需要考量關鍵的硬體資源：<strong>VRAM (顯示卡記憶體)</strong> 與 <strong>算力 (GPU)</strong>。<br>
+一般來說，參數越大的模型越聰明，但也需要越大的記憶體。舉例來說：</p>
+<ul>
+<li>8B (80 億參數) 級別模型（如 Llama 3 8B），大約需要 6~8GB 以上的 VRAM。</li>
+<li>30B (300 億參數) 級別，則可能需要 24GB 以上的 VRAM。</li>
+</ul>
+<hr>
+<h2 id="2-ollama-部署與-web-api-實戰">2. Ollama 部署與 Web API 實戰 </h2>
+<p>要在原本我們熟悉的伺服器環境中跑 LLM，最簡單的工具之一就是 <strong>Ollama</strong>。它把龐大複雜的模型執行環境包裝得像普通的服務一樣，並且<strong>自帶一個 RESTful API 介面</strong>！對我們熟悉 Web API 的工程師來說，這意味著我們不需要寫艱深的 Python PyTorch 程式，只要發送 HTTP Request 就能獲得 AI 產生結果。</p>
+<h3 id="ollama-簡易安裝與啟動">Ollama 簡易安裝與啟動 </h3>
+<p>將 AI 部署到您的電腦上只需三個簡單步驟：</p>
+<div class="mermaid">graph LR
+    A[1. 進入官網下載&lt;br/&gt;ollama.com] --&gt; B[2. 執行安裝程式&lt;br/&gt;完成無腦安裝]
+    B --&gt; C[3. 開啟終端機&lt;br/&gt;下載並啟動模型]
+    
+    C -. 輸入指令 .-&gt; D&gt;ollama run llama3]
+    
+    style A fill:#e1f5fe,stroke:#01579b
+    style B fill:#fff3e0,stroke:#e65100
+    style C fill:#e8f5e9,stroke:#1b5e20
+    style D fill:#333,color:#fff,stroke:#000
+</div><ol>
+<li><strong>下載</strong>：前往 <a href="https://ollama.com/">Ollama 官方網站</a> 點擊 Download，支援 Windows / macOS / Linux。</li>
+<li><strong>安裝</strong>：如同一般應用程式般執行安裝檔。安裝完成後，Ollama 會在背景執行一個 API 伺服器 (預設佔用 <code>11434</code> Port)。</li>
+<li><strong>啟動</strong>：打開您的 命令提示字元 (cmd) 或 PowerShell，輸入以下指令來下載並執行您的第一個模型（例如 80 億參數的 Llama 3）：<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>ollama run llama3
+</code></pre><em>(註：初次執行會需要時間下載數 GB 的模型檔，下載完成後就會進入可直接對話的終端機介面。)</em></li>
+</ol>
+<h3 id="架構解析">架構解析 </h3>
+<div class="mermaid">sequenceDiagram
+    participant ERP as 企業系統 (C＃ 應用程式)
+    participant Ollama as Ollama API Server (Port: 11434)
+    participant Model as LLM 模型 (例如 Llama3)
+
+    ERP-&gt;&gt;Ollama: POST /api/generate &lt;br&gt; {"model":"llama3", "prompt":"請總結工單..."}
+    Ollama-&gt;&gt;Model: 載入模型並計算推論
+    Model--&gt;&gt;Ollama: 產出文字結果
+    Ollama--&gt;&gt;ERP: 200 OK, 回傳 JSON 資料
+</div><p>在範例資料夾 <code>examples/</code> 中，我們準備了一支 <code>OllamaBasicClient.cs</code> 程式，示範如何使用 C# 透過 <code>HttpClient</code> 發送請求到 Ollama，來獲得推論結果。</p>
+<hr>
+<h2 id="3-實務應用場景從文字到視覺-vlm">3. 實務應用場景：從文字到視覺 (VLM) </h2>
+<p>當我們具備了打 API 的能力後，可以做些什麼？<br>
+製造業最常見的需求之一，就是<strong>解析機台錯誤日誌（Log）或是未結構化的工單資料</strong>。您可以將這包文字丟給模型，要求它：「請以 JSON 格式總結這段機台發生的主要錯誤，包含機器代碼與發生時間」。</p>
+<p>更酷的是，我們還可以運用 <strong>VLM (Vision Language Model, 視覺語言模型)</strong>。這代表您可以傳入一張機台報錯的圖檔或是儀表板畫面，讓 AI 去「看圖說故事」。</p>
+<div class="mermaid">graph TD
+    subgraph Input_Layer [資料輸入層]
+        A[機台拋出 Error Log&lt;br/&gt;文字或截圖] --&gt; B[前處理: 轉換為 Base64 或一般文字]
+    end
+
+    subgraph AI_Processing [AI 核心處理層]
+        B --&gt; C([HTTP POST 請求傳輸])
+        C --&gt; D[Ollama 載入 LLaVA 等模型]
+        D --&gt; E[LLM 推理分析與格式化]
+    end
+
+    subgraph Data_Storage [數據儲存層]
+        E --&gt; F{檢查是否為 JSON}
+        F -- Yes --&gt; G[寫入關聯式資料庫記錄]
+        F -- No --&gt; H[錯誤日誌例外處理]
+    end
+
+    %% 樣式美化
+    style D fill:#f9f,stroke:#333,stroke-width:2px
+    style G fill:#bbf,stroke:#333,stroke-width:2px
+</div><hr>
+<h2 id="recap--exercise">Recap &amp; Exercise </h2>
+<h3 id="-recap-總結">📝 Recap 總結 </h3>
+<ol>
+<li>因為資安與網路限制，製造業適合部署 Local LLM。</li>
+<li>Ollama 提供封裝好的 REST API，讓我們可以使用熟悉的程式語言（如 C#）發送 HTTP Request 來呼叫 AI。</li>
+<li>AI 除了讀文字（生成結構化 JSON），視覺模型 (VLM) 將有助於機台圖片判讀。</li>
+</ol>
+<h3 id="️️-exercise-演練">🏋️‍♂️ Exercise 演練 </h3>
+<ol>
+<li>請開啟您的終端機/命令提示字元，確認主機已安裝 Ollama，並且能夠啟動。</li>
+<li>開啟 <code>examples/OllamaBasicClient.cs</code>，使用 .NET SDK 建立專案並執行該範例，確認您能成功接收到由 LLM 生成的字串。</li>
+<li>（進階）嘗試修改程式碼，發送一個簡單的機身錯誤代碼給模型，並強迫模型在回應中「僅回覆解決方案的三個步驟」。</li>
+</ol>
+
+      </div>
+      
+      
+    
+    
+    <script type="module">
+// TODO: If ZenUML gets integrated into mermaid in the future,
+//      we can remove the following lines.
+
+
+var MERMAID_CONFIG = ({"startOnLoad":false});
+if (typeof MERMAID_CONFIG !== 'undefined') {
+  MERMAID_CONFIG.startOnLoad = false
+  MERMAID_CONFIG.cloneCssStyles = false
+  MERMAID_CONFIG.theme = "default"
+}
+
+mermaid.initialize(MERMAID_CONFIG || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidetransitionend', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+  await mermaid.run({
+    nodes: document.querySelectorAll('.mermaid')
+  })
+} else {
+  await mermaid.run({
+    nodes: document.querySelectorAll('.mermaid')
+  })
+}
+</script>
+    
+    
+    
+  
+    </body></html>
