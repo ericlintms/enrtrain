@@ -51,7 +51,7 @@ namespace Session2Examples
                 Document = doc,
                 Similarity = CosineSimilarity(questionVector, doc.Vector)
             })
-            .OrderByDescending(x => x.Similarity)
+            .OrderByDescending(x => x.Similarity)   // 這邊會依照相似度由高到低排序
             .ToList();
 
             // 輸出結果
@@ -62,6 +62,12 @@ namespace Session2Examples
             }
 
             Console.WriteLine("\n[系統] 接著，會將相符程度最高的那筆資料，夾帶到 Prompt 給 LLM 產生最終回覆。");
+
+            Console.WriteLine("\n相似度最高的知識庫內容是：");
+            var maxResult = results[0];
+            Console.WriteLine(maxResult.Document.Content);
+
+            // 這邊就會接上往 ollama or 其他 LLM server 送的 code segment
         }
 
         // 輔助方法：計算餘弦相似度 (Cosine Similarity)
