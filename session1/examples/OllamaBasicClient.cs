@@ -26,13 +26,13 @@ namespace Session1Examples
             Console.WriteLine("開始透過 C# 呼叫地端 Ollama API...");
 
             // 1. 設定 Ollama 服務的位址 (預設在本機 11434 port)
-            string ollamaEndpoint = "http://localhost:11434/api/generate";
+            string ollamaEndpoint = "http://10.1.58.1:11434/api/generate";
 
             // 2. 建立我們想傳遞給 AI 的請求物件
             // 這裡指定使用 llama3 模型，並提出我們遇到的工廠情境問題
             var requestData = new
             {
-                model = "llama3", // 需替換為您本地擁有的模型名稱
+                model = "gemma3", // 需替換為您本地擁有的模型名稱
                 prompt = "機台出現 ErrorCode: E-404, 感測器溫度異常。請給出排查建議。",
                 stream = false    // 為了簡化範例，我們設定不以串流方式回傳，一次拿回完整結果
             };
@@ -51,7 +51,7 @@ namespace Session1Examples
                     
                     Console.WriteLine("\n[系統] 請求已發出，等待模型推論中...");
                     HttpResponseMessage response = await client.PostAsync(ollamaEndpoint, content);
-                    
+
                     // 確保 HTTP 狀態碼為 200 OK
                     response.EnsureSuccessStatusCode();
 

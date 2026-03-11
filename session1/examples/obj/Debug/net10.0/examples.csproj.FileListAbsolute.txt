@@ -1,0 +1,15 @@
+/home/ericlin/github/enrtrain/session1/examples/bin/Debug/net10.0/examples
+/home/ericlin/github/enrtrain/session1/examples/bin/Debug/net10.0/examples.deps.json
+/home/ericlin/github/enrtrain/session1/examples/bin/Debug/net10.0/examples.runtimeconfig.json
+/home/ericlin/github/enrtrain/session1/examples/bin/Debug/net10.0/examples.dll
+/home/ericlin/github/enrtrain/session1/examples/bin/Debug/net10.0/examples.pdb
+/home/ericlin/github/enrtrain/session1/examples/obj/Debug/net10.0/examples.GeneratedMSBuildEditorConfig.editorconfig
+/home/ericlin/github/enrtrain/session1/examples/obj/Debug/net10.0/examples.AssemblyInfoInputs.cache
+/home/ericlin/github/enrtrain/session1/examples/obj/Debug/net10.0/examples.AssemblyInfo.cs
+/home/ericlin/github/enrtrain/session1/examples/obj/Debug/net10.0/examples.csproj.CoreCompileInputs.cache
+/home/ericlin/github/enrtrain/session1/examples/obj/Debug/net10.0/examples.sourcelink.json
+/home/ericlin/github/enrtrain/session1/examples/obj/Debug/net10.0/examples.dll
+/home/ericlin/github/enrtrain/session1/examples/obj/Debug/net10.0/refint/examples.dll
+/home/ericlin/github/enrtrain/session1/examples/obj/Debug/net10.0/examples.pdb
+/home/ericlin/github/enrtrain/session1/examples/obj/Debug/net10.0/examples.genruntimeconfig.cache
+/home/ericlin/github/enrtrain/session1/examples/obj/Debug/net10.0/ref/examples.dll
