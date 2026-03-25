@@ -16,6 +16,7 @@ graph LR
 ```
 
 ### 常見的相似度計算方式 (Distance Metrics)
+
 1. **Cosine Similarity (餘弦相似度)**: 計算兩個向量夾角的餘弦值，與向量長度無關，常應用於自然語言處理。
 2. **Euclidean Distance (歐式距離, L2)**: 計算兩個向量點在空間中的直線距離。
 3. **Dot Product (內積)**: 考慮向量長度與夾角，當所有向量都做過正規化 (Normalized) 後，其結果會正比於餘弦相似度。
@@ -46,12 +47,14 @@ graph TD
     C2 -.->|2. 只在 Cluster 2 內計算距離| V3
     C2 -.->|2. 只在 Cluster 2 內計算距離| V4
 ```
+
 - **優點**：記憶體佔用較少，建立索引較為快速。
 - **缺點**：在高維度時，叢集邊界容易發生重疊現象，如果目標向量剛好在叢集邊界上，可能會導致找不到正確解答（影響精準度）。通常會搭配 PQ (Product Quantization) 來進一步壓縮向量。
 
 ### 2.2 HNSW (Hierarchical Navigable Small World)
 
 HNSW 是一種基於圖論 (Graph-based) 的演算法，基於 Navigable Small World (NSW) 改進而來，是目前最受歡迎且效能極佳的 ANN 演算法之一。它建構了類似「跳表 (Skip List)」的多層次圖結構：
+
 - **高層圖**：節點數少，隨機抽取部分節點建立較稀疏的連線（類似高速公路），負責大範圍快速定位。
 - **底層圖**：包含所有的資料節點，節點間連線密集，負責精確尋找局部最佳解。
 
@@ -84,6 +87,7 @@ graph TD
     
     Q[/Query/] -->|1. 由上層入口進入導航| L2_A
 ```
+
 - **優點**：搜尋速度極快，精準度（Recall rate）非常高，實務表現優異。
 - **缺點**：因為要維護大量的圖表節點連線關係 (Edges)，會消耗龐大的記憶體容量，且建立索引的過程較為耗時。
 
@@ -94,6 +98,7 @@ graph TD
 在探討與向量結合的混合搜尋之前，必須先了解傳統基於關鍵字比對的 Lexical Search。在評估一份文件與關鍵字搜尋的相關程度時，業界最廣泛採用的評分演算法即是 **BM25 (Best Matching 25)**。
 
 ### 核心概念與計算考量
+
 BM25 可以被視為傳統 TF-IDF 演算法的改良版。它在計算相關性分數時，主要考量以下三大因素：
 
 1. **詞頻 (Term Frequency, TF) 與飽和度收斂**：
@@ -129,7 +134,7 @@ Apache Lucene 是一個廣泛使用的開源全文字搜尋引擎工具包（也
 
 1. **原生 HNSW 實作**：
    Lucene 內部實作了 HNSW 來建立向量的索引。當有包含高維度向量的 Document 寫入 Lucene 時，Lucene 會一併在底層建構和更新 HNSW 圖。
-   
+
 2. **混合搜尋 (Hybrid Search)**：
    Lucene 最強大的優勢在於能將傳統的 Lexical Search（基於關鍵字、詞頻的 BM25 演算法）與 Vector Search 完美結合。使用者可以在同一次查詢中，同時進行精確的比對與語意搜尋。之後再透過如 Reciprocal Rank Fusion (RRF) 或線性加權的方式將兩份結果重新排序 (Re-ranking) 選出綜合最相關的結果。
 
@@ -158,4 +163,5 @@ graph LR
 ```
 
 ### 總結
+
 Vector Search 透過 Embeddings 與向量空間概念，將搜尋技術提升至能夠理解「語意」的維度。在實際應用中，為了兼顧效能與精確度而發展出了 IVF 與 HNSW 等 ANN 結構；而結合傳統全文檢索巨頭如 Lucene 的混合搜尋方案（Hybrid Search + Metadata Filtering），則是許多現代大型 AI 搜尋應用的主流選擇。

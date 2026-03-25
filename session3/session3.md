@@ -10,6 +10,7 @@
 但 Agent 具備 **工具調用 (Function Calling / Tool Use)** 的能力。
 
 當你詢問 Agent：「機台 E-03 上個月維修幾次？」
+
 1. Agent 認知到自己手邊沒有這些即時資料。
 2. Agent 決定使用你預先為它準備好的「資料庫查詢工具」。
 3. Agent 主動生成一個查資料庫的指令給系統。
@@ -37,6 +38,7 @@ sequenceDiagram
 ### 為什麼我們需要 LangChain 等框架？
 
 一般來說，如果您要自己寫這套「Agent 調用工具」的程式，會遇到很多麻煩的底層操作：
+
 - 您要把公司所有的 API 寫成一長串的 JSON 敘述來跟 AI 說「我有這些工具可以用喔」。
 - 您要常常解析 AI 回傳的「決定調用某工具」的 JSON 格式字串。
 - 您要捕捉執行結果並把它再次黏合進歷史對話紀錄。
@@ -70,6 +72,7 @@ graph LR
 透過框架，您只需要在這個函數上面加一個**裝飾器 (Attribute/Annotation)**，然後賦予它一段「人類語言的描述」，AI 就能看懂。
 
 **框架實作的感覺像這樣 (虛擬語法)：**
+
 ```csharp
 // 我們只要寫好工具與文字描述，框架會自動把這段翻譯給 AI 聽
 [Description("用來查詢指定機台的即時感測器溫度")]
@@ -79,8 +82,111 @@ public string CheckSensor(string machineId) {
     return $"目前溫度 {temp} 度";
 }
 ```
+
 然後，當您跟 Agent 說：「幫我看一下 E-01 熱不熱？」
 Agent 背後的 LangChain/SK 引擎會自動對比它所擁有的工具，發現 `CheckSensor` 的文字描述完全吻合這項需求，接著就自動觸發該函式，最後回報：「經過查詢，機台 E-01 目前溫度為 85 度，確實稍微偏熱喔！」
+
+---
+
+### 👉 Microsoft.SemanticKernel 實際調用方式
+
+光看概念還不夠，下面展示 C# 中實際能跑起來的完整流程。
+
+#### **第一步：安裝 NuGet 套件**
+
+```bash
+dotnet add package Microsoft.SemanticKernel
+```
+
+#### **第二步：定義 Plugin（工具集）**
+
+透過兩個 Attribute，SK 框架會自動將函式資訊序列化成 LLM 看得懂的工具清單：
+
+| Attribute | 用途 |
+|-----------|------|
+| `[KernelFunction("名稱")]` | 將此方法標記為 AI 可調用的工具，並給予唯一識別名稱 |
+| `[Description("說明")]` | 以自然語言描述工具或參數的用途，LLM 靠這段文字決定要不要呼叫 |
+
+```csharp
+using Microsoft.SemanticKernel;
+using System.ComponentModel;
+
+public class FactoryPlugin
+{
+    [KernelFunction("check_maintenance")]
+    [Description("查詢指定機台在某個月份的維護保養紀錄")]
+    public string CheckMaintenance(
+        [Description("機台編號，例如 E-01、E-03")] string machineId,
+        [Description("查詢月份，格式 YYYY-MM，例如 2024-01")] string month)
+    {
+        // 真實情境：替換為對 DB 或 ERP API 的查詢
+        return $"機台 {machineId} 在 {month} 的保養紀錄：...";
+    }
+
+    [KernelFunction("get_temperature")]
+    [Description("取得指定機台的即時感測器溫度讀數（攝氏）")]
+    public string GetTemperature(
+        [Description("機台編號，例如 E-01、E-03")] string machineId)
+    {
+        // 真實情境：讀取感測器 API 或 SCADA 系統
+        return $"機台 {machineId} 目前溫度 XX°C";
+    }
+}
+```
+
+**第三步：建立 Kernel 並連接 Ollama**
+
+SK 支援多種 LLM 後端；本地開發可直接使用 Ollama 的 OpenAI 相容端點，**完全不需要改任何後端設定**：
+
+```csharp
+using Microsoft.SemanticKernel;
+using Microsoft.SemanticKernel.ChatCompletion;
+using Microsoft.SemanticKernel.Connectors.OpenAI;
+
+// 建立 Kernel Builder（SK 的核心組裝器）
+var builder = Kernel.CreateBuilder();
+
+// 指向本地 Ollama 的 OpenAI 相容端點
+// 若改用 Azure OpenAI：builder.AddAzureOpenAIChatCompletion(...)
+builder.AddOpenAIChatCompletion(
+    modelId:  "llama3.2",
+    apiKey:   "ollama",                      // Ollama 不需要真實金鑰
+    endpoint: new Uri("http://localhost:11434/v1"));
+
+var kernel = builder.Build();
+
+// 將工具集掛入 Kernel，第二個參數為 Plugin 名稱（命名空間）
+kernel.Plugins.AddFromObject(new FactoryPlugin(), "FactoryTools");
+```
+
+**第四步：啟用 Auto Function Calling 並送出對話**
+
+`FunctionChoiceBehavior.Auto()` 的關鍵效果：讓 LLM **自行決定**何時呼叫哪個工具、是否需要多輪呼叫，開發者不必手動解析 JSON 或管理對話迴圈。
+
+```csharp
+var chatCompletion = kernel.GetRequiredService<IChatCompletionService>();
+
+// ChatHistory 保存對話記憶（含 System / User / Assistant / Tool 訊息）
+var history = new ChatHistory();
+history.AddSystemMessage("你是工廠設備助手，需要資料時請主動使用工具，並以繁體中文回答。");
+
+// Auto：SK + LLM 協同決定工具調用時機，無需開發者干預
+var settings = new OpenAIPromptExecutionSettings
+{
+    FunctionChoiceBehavior = FunctionChoiceBehavior.Auto()
+};
+
+// 送出問題──SK 會自動完成「推理 → 呼叫工具 → 整合結果 → 回答」整個流程
+history.AddUserMessage("機台 E-03 在 2024-01 有保養紀錄嗎？");
+var response = await chatCompletion.GetChatMessageContentAsync(history, settings, kernel);
+
+Console.WriteLine(response.Content);
+// 預期輸出：根據查詢，機台 E-03 在 2024-01 無定期保養紀錄，但...
+```
+
+> **完整可執行範例**（含多輪對話與多工具自動調用）請參閱 `examples/SemanticKernelAgent.cs`。
+
+---
 
 ### 什麼是 Model Context Protocol (MCP)？
 
@@ -118,6 +224,7 @@ graph TD
 
 假設您的 IT 部門已經開發了一支標準的 **ERP MCP Server** 在公司內部運作。
 某天，設備工程師在他的電腦上裝了最新版、支援 MCP 的 AI 桌面軟體（例如 Claude Desktop），他只需要在軟體的設定檔中加入一行：
+
 ```json
 "mcpServers": { 
   "CompanyERP": { "command": "http://internal-mcp-server/erp" } 
@@ -131,15 +238,16 @@ AI 便會自動透過 MCP 去您的 ERP 系統查詢並回報！
 
 ---
 
-
 ## 3. AI 製程工程師的整合方案探討
 
 將 Session 1 到 3 綜合起來：
+
 1. **Local LLM (Session 1)** 處理機密推論。
 2. **RAG (Session 2)** 提供詳細的機台技術手冊。
 3. **Agent (Session 3)** 自動觸發報表抓取並傳送分析。
 
 這時身為 IT 工程師，我們最重要的工作就變成了把關 **資安邊界**：
+
 - **存取權限 (Read)**：AI API 可以調用哪些資料庫 Schema？
 - **執行權限 (Write/Execute)**：如果我們寫了一個「遠端重啟機台」的工具給 Agent，讓不可控的 LLM 自行決定重啟，會是非常危險的事。因此對於變更狀態的工具，必須保留 **Human-in-the-loop (人類審核環節)**。
 
@@ -148,10 +256,12 @@ AI 便會自動透過 MCP 去您的 ERP 系統查詢並回報！
 ## Recap & Exercise
 
 ### 📝 Recap 總結
+
 1. AI Agent 的核心能力在於 Function Calling，它能主動判斷並呼叫我們開放給它的企業工具 API。
 2. 結合工具能極大化自動化流程，但也必須嚴格劃分權限，確保高風險操作保留人工審核機制。
 
 ### 🏋️‍♂️ Exercise 演練
+
 1. 查看 `examples/ToolCallingAgent.cs` 程式碼中的偽代碼範例。
 2. 了解在 C# 程式碼中如何「聲明」一個工具讓 AI 得知該工具的存在與輸入參數。
 3. （實作發想）針對您單位的痛點，若要實作一個 Agent，您會為它開發哪三個「工具 / Function」？提出一個整合草案。

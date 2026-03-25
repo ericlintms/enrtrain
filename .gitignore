@@ -1,0 +1,5 @@
+**/obj/**
+**/*.*.editorconfig
+**/*.*.cache
+**/bin/**
+session1/examples/obj/Debug/net10.0/examples.GeneratedMSBuildEditorConfig.editorconfig

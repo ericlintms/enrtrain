@@ -49,8 +49,8 @@ namespace Session3Examples
                 if (functionName == "QueryMaintenanceHistory")
                 {
                     // 解析參數
-                    var mId = doc.RootElement.GetProperty("args").GetProperty("machineId").GetString();
-                    var mDate = doc.RootElement.GetProperty("args").GetProperty("date").GetString();
+                    var mId   = doc.RootElement.GetProperty("args").GetProperty("machineId").GetString() ?? string.Empty;
+                    var mDate = doc.RootElement.GetProperty("args").GetProperty("date").GetString()     ?? string.Empty;
 
                     // 3. 由 C# 後端代替 Agent 真正去執行該工具函式
                     string toolResult = QueryMaintenanceHistory(mId, mDate);
